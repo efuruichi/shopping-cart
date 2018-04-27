@@ -1,3 +1,31 @@
 body {
-    background-color: blanchedalmond;
+    background-color:white;
+}
+
+h1 {
+    background-color: burlywood;
+    text-align: left;
+    font-size: 20px;
+    color: saddlebrown;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+.product {
+    border-top: 1px solid gray;  
+    padding: 10px;
+    width: 700px;
+}
+
+.price {
+    padding: 10px;
+    float: right;
+}
+
+
+
+.description {
+    display: none;
+    padding: 10px;
 }

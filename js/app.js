@@ -5,9 +5,19 @@ function getList(shoppingList){
  //   console.log(shoppingList[i].product);
 
     var divElem = document.createElement('div');
-    divElem.className = 'productNames';
+    divElem.className = 'product';
     divElem.innerHTML = shoppingList[i].product;
     document.body.appendChild(divElem);
+
+    var priceElem = document.createElement ('div');
+    priceElem.className = 'price';
+    priceElem.innerHTML = '$' + shoppingList[i].price;
+    document.body.appendChild(priceElem);
+
+    var pElem = document.createElement('p');
+    pElem.className = 'alignleft';
+    pElem.innerHTML = divElem;
+    console.log(pElem);
 
     var descElem = document.createElement('div');
     descElem.className = 'description';
@@ -17,3 +27,23 @@ function getList(shoppingList){
     }
 }
 getList(list)
+
+var parentElem = document.getElementsByClassName('product');
+
+console.log(parentElem);
+
+for (var i = 0; i<parentElem.length; i++){
+    parentElem[i].addEventListener("click", showDesc);
+}
+
+function showDesc(){
+ //   console.log(test);
+    var childElem = this.querySelectorAll('.description')[0];
+    if(childElem.style.display === 'block'){
+        childElem.style.display = 'none';
+        childElem.style.color = 'gray';
+    }else{
+        childElem.style.display = 'block';
+        childElem.style.color = 'gray';
+    }
+}
